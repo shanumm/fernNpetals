@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+$header2: 1rem;
+
+$gradback: rgb(34, 61, 195);
+$gradfill: linear-gradient(
+  20deg,
+  rgba(34, 61, 195, 1) 0%,
+  rgba(176, 36, 173, 1) 100%
+);
+
+@mixin flex($direction, $justifycontent, $alignitems) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justifycontent;
+  align-items: $alignitems;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}

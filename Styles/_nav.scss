@@ -1,0 +1,83 @@
+.main-head {
+  width: 95%;
+  margin: 0 0 0 auto;
+}
+
+nav {
+  @include flex(row, space-between, center);
+  position: fixed;
+  padding-top: 1%;
+  width: 90%;
+  min-height: 8vh;
+  font-size: $header2;
+  flex-wrap: wrap;
+  transition: all 0.8s cubic-bezier(0.9, 0, 0.33, 1);
+
+  .logo {
+    @include flex(row, flex-start, center);
+    flex: 1 1 20rem;
+  }
+  ul {
+    @include flex(row, space-around, center);
+    flex: 1 1 40rem;
+    list-style: none;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+.active {
+  background: grey;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 2rem;
+}
+
+.activescroll {
+  background: rgba(196, 196, 196, 0.4);
+  backdrop-filter: blur(8px);
+  z-index: 10;
+  border-radius: 1px;
+  padding: 0.8rem;
+  border-radius: 5px 5px 40px 40px;
+  transition: all 0.4s;
+}
+.activescrollremove {
+  transition: all 0.4s;
+}
+
+@media screen and(max-width: 948px) {
+  .main-head {
+    width: 100%;
+    margin: 0;
+  }
+  nav {
+    background: rgb(81, 134, 105);
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+  }
+  .active {
+    padding: 0.3rem;
+    background: none;
+    color: black;
+  }
+  .activescroll {
+    background: rgba(196, 196, 196, 0.7);
+
+    margin: 0;
+  }
+  .top-nav div {
+    display: none;
+  }
+
+  nav {
+    font-size: calc($header2 - 1rem);
+
+  }
+  .nav-links li:last-child{
+    display: none;
+  }
+}
