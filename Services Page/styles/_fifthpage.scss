@@ -1,0 +1,124 @@
+/*  fifth page */
+
+.fifth-page {
+  min-height: 150vh;
+  background: #151515;
+  position: relative;
+}
+
+/*fifth page before*/
+.fifth-page::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 80%;
+  height: 0.3rem;
+  margin: auto;
+  background: #a1a1a1;
+}
+/*fifth page header*/
+
+.fifth-page-header {
+  padding-top: 6rem;
+  font-size: 1rem;
+  min-height: 10vh;
+  position: sticky;
+  top: 0;
+  flex-wrap: wrap;
+  margin: auto;
+  left: 0;
+  text-align: end;
+}
+.fifth-page-header h1 {
+    transform: rotate(90deg) translate(-50%,-300%);
+    transform-origin: 0% 100%;
+    color: white;
+    display: inline-block;
+    
+}
+
+/*fifth page hero section*/
+.fifth-page-hero {
+  min-height: 80vh;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.fifth-page-hero-photo {
+  margin: 1rem;
+  width: 10%;
+  height: 50vh;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+.black-theme {
+  color: white;
+}
+
+.fifth-page-hero-text .intro-text {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s all ease-in-out;
+  h3,
+  h1 {
+    color: white;
+  }
+}
+
+.intro-text-appear {
+  opacity: 1;
+  transform: translateY(0px);
+}
+#image10,
+#image11,
+#image12 {
+  width: 100%;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+#image10 {
+  background: url("../images/gift-2870161_1920.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+#image11 {
+  background: url("../images/pink-wine-1964457_1920.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+#image12 {
+  background: url("../images/pexels-tad-atkinson-410398.jpg");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.fifth-page-hero-text,
+.fifth-page-hero-photo {
+  flex: 1;
+}
+
+/* All images hover effect*/
+
+/*Order button*/
+
+.anniversary-cards-button {
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+}
+.anniversary-cards-button a {
+  color: #151515 !important;
+  font-size: 1rem;
+  text-transform: capitalize;
+}

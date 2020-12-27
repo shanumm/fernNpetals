@@ -1,0 +1,284 @@
+/*<------------------Landing page----------------> */
+
+.landing-page {
+  width: 100%;
+  height: 100vh;
+  background-size: contain;
+  position: relative;
+  overflow: hidden;
+}
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background: url("../images/sea-2755908_1920.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  transition: all 0.5s;
+  transform: scale(2, 2);
+  animation: scale-image 0.8s ease-in-out 5.5s forwards;
+  z-index: -2;
+}
+
+.landing-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background: #151515;
+  animation: slide-in 1.5s ease-in-out 6s forwards;
+  z-index: -1;
+}
+
+/* Landing page overlay effect */
+
+.overlay {
+  position: absolute;
+  top: 0%;
+  height: 100%;
+  width: 100%;
+  transform-origin: top;
+  background: #151515;
+  animation: scale 6s ease-in-out 0.5s forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-wrap: wrap;
+}
+.overlay-text {
+  transform: translateY(-100%);
+  color: white;
+  opacity: 0;
+  transition: all 1s;
+  animation: text-transform 2.5s linear 2s forwards;
+}
+
+/*  overlay effect animation  */
+
+@keyframes text-transform {
+  0% {
+    opacity: 0;
+  }
+  40%,
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes scale {
+  0% {
+    top: 0;
+  }
+  30%,
+  70% {
+    top: 0%;
+  }
+  100% {
+    top: 200%;
+  }
+}
+
+/* Landing page header and navbar */
+
+.hero-header {
+  transform-origin: bottom;
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  flex-wrap: wrap;
+}
+/*NavBar*/
+
+.navbar {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#logo,
+.homepage {
+  flex: 1 1 10rem;
+  align-items: center;
+  color: white;
+}
+
+.navlinks {
+  flex: 1.5 1.5 10rem;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.navlinks li {
+  color: white;
+}
+
+.homepage {
+  text-align: right;
+  flex: 1 1 10rem;
+}
+.homepage-button {
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  background: white;
+  cursor: pointer;
+  border-radius: 5px;
+  a {
+    color: black;
+  }
+}
+
+/*Landing page main content*/
+
+.hero {
+  width: 95%;
+  margin: auto;
+  min-height: 90vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero .service-logo p,
+.hero div h1,
+.hero div h3 {
+  color: white;
+}
+.hero .service-logo,
+.hero-text,
+.hero-nav {
+  flex: 1;
+}
+
+.hero-text {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transform: translateY(-25%);
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+.hero-text h1 {
+  opacity: 0;
+  letter-spacing: 1px;
+  animation: main-text-slide 0.5s linear 6s forwards;
+}
+.hero-text h3 {
+  opacity: 0;
+  animation: discription-text-slide-in 1s ease-in-out 6.2s forwards;
+}
+
+.hero-text::before {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: white;
+  animation: slide-in-effect 1s ease-in-out 6s forwards;
+}
+
+.hero-navlinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+
+  li {
+    padding: 0.5rem;
+  }
+}
+
+.service-logo p {
+  transform: rotate(90deg) translate(-25%);
+  transform-origin: 0 100%;
+}
+
+.hero-header {
+  transform: translateY(-200%);
+  animation: top-text-slide-in 1s ease-in-out 7s forwards;
+}
+.service-logo {
+  transform: translateX(-50%);
+  animation: text-slide-in 1s ease-in-out 7s forwards;
+}
+.hero-nav {
+  transform: translateX(50%);
+  animation: text-slide-in 1s ease-in-out 7s forwards;
+}
+
+/* Icons */
+
+.fa {
+  width: 10px;
+  height: 10px;
+  color: rgb(255, 255, 255);
+}
+
+/* Landing page animation */
+
+@keyframes slide-in-effect {
+  to {
+    left: 200%;
+  }
+}
+
+@keyframes slide-in {
+  to {
+    width: 49%;
+  }
+}
+@keyframes scale-image {
+  to {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes text-slide-in {
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes top-text-slide-in {
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes main-text-slide {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes discription-text-slide-in {
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
