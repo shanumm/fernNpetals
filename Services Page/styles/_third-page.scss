@@ -111,3 +111,32 @@
   font-size: 1rem;
   text-transform: capitalize;
 }
+
+/* Third page media query */
+
+@media screen and(max-width: 948px) {
+  .third-page-header {
+    padding-top: 2rem;
+    text-align: center;
+    position: static;
+    h1 {
+      transform: unset;
+      transform-origin: unset;
+    }
+  }
+  .third-page-hero-photo {
+    flex: 1 1 40rem;
+  }
+  .third-page-hero-text {
+    flex: 1 1 40rem;
+    order: 2;
+    h1 {
+      text-align: center;
+    }
+    padding-bottom: 5rem;
+  }
+  .gift-cards-button {
+    margin: 0 50%;
+    transform: translateX(-50%);
+  }
+}

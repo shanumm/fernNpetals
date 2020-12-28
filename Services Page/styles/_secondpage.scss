@@ -29,13 +29,11 @@
   flex-wrap: wrap;
   margin: auto;
   left: 0;
-  
 }
 .second-page-header h1 {
   display: inline-block;
   transform: rotate(90deg) translateY(-50%);
   transform-origin: 0 100%;
-  
 }
 
 /*second page hero*/
@@ -110,4 +108,36 @@
   color: black !important;
   font-size: 1rem;
   text-transform: capitalize;
+}
+
+/* Second page media query */
+
+@media screen and(max-width: 948px) {
+  .shadow-page-two {
+    display: none;
+  }
+  .second-page-header {
+    padding-top: 2rem;
+    text-align: center;
+    position: static;
+    h1 {
+      transform: unset;
+      transform-origin: unset;
+    }
+  }
+  .second-page-hero-photo {
+    flex: 1 1 40rem;
+  }
+  .second-page-hero-text {
+    flex: 1 1 40rem;
+    order: 2;
+    h1 {
+      text-align: center;
+    }
+    padding-bottom: 5rem;
+  }
+  .cake-cards-button {
+    margin: 0 50%;
+    transform: translateX(-50%);
+  }
 }

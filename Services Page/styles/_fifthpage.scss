@@ -31,11 +31,10 @@
   text-align: end;
 }
 .fifth-page-header h1 {
-    transform: rotate(90deg) translate(-50%,-300%);
-    transform-origin: 0% 100%;
-    color: white;
-    display: inline-block;
-    
+  transform: rotate(90deg) translate(-50%, -300%);
+  transform-origin: 0% 100%;
+  color: white;
+  display: inline-block;
 }
 
 /*fifth page hero section*/
@@ -121,4 +120,33 @@
   color: #151515 !important;
   font-size: 1rem;
   text-transform: capitalize;
+}
+
+/*  Fifth page media query  */
+
+@media screen and(max-width: 948px) {
+  .fifth-page-header {
+    padding-top: 2rem;
+    text-align: center;
+    position: static;
+    h1 {
+      transform: unset;
+      transform-origin: unset;
+    }
+  }
+  .fifth-page-hero-photo {
+    flex: 1 1 40rem;
+  }
+  .fifth-page-hero-text {
+    flex: 1 1 40rem;
+    order: 2;
+    h1 {
+      text-align: center;
+    }
+    padding-bottom: 5rem;
+  }
+  .anniversary-cards-button {
+    margin: 0 50%;
+    transform: translateX(-50%);
+  }
 }

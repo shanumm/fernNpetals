@@ -196,8 +196,8 @@ li {
 
 .navlinks {
   -webkit-box-flex: 1.5;
-      -ms-flex: 1.5 1.5 10rem;
-          flex: 1.5 1.5 10rem;
+      -ms-flex: 1.5 1.5 20rem;
+          flex: 1.5 1.5 20rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -206,12 +206,11 @@ li {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .navlinks li {
   color: white;
+  margin: 0rem 2rem;
 }
 
 .homepage {
@@ -467,6 +466,69 @@ li {
   }
 }
 
+/* <------page 1 responsive-----> */
+@media screen and (max-width: 948px) {
+  .background-image {
+    background: url("https://cdn.pixabay.com/photo/2016/03/23/15/00/ice-cream-cone-1274894_960_720.jpg");
+  }
+  #logo {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 10rem;
+            flex: 1 1 10rem;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .navlinks {
+    padding-top: 1rem;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .navlinks li {
+    margin: 0 1rem;
+  }
+  .navlinks,
+  .homepage {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 5rem;
+            flex: 1 1 5rem;
+  }
+  .homepage {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    padding-top: .5rem;
+  }
+  .hero {
+    display: block;
+    position: relative;
+  }
+  .hero .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-transform: translateY(calc(-50% - 10vh)) translateX(-50%);
+            transform: translateY(calc(-50% - 10vh)) translateX(-50%);
+  }
+  .hero .hero-text h1, .hero .hero-text h3 {
+    width: 100%;
+    padding: 0 2rem;
+  }
+  .hero .hero-nav {
+    position: absolute;
+    -webkit-transform: translateX(-250%);
+            transform: translateX(-250%);
+    left: 0;
+    bottom: 20%;
+  }
+  .service-logo {
+    display: none;
+  }
+}
+
 /*second page*/
 .second-page {
   min-height: 100vh;
@@ -600,6 +662,46 @@ li {
   color: black !important;
   font-size: 1rem;
   text-transform: capitalize;
+}
+
+/* Second page media query */
+@media screen and (max-width: 948px) {
+  .shadow-page-two {
+    display: none;
+  }
+  .second-page-header {
+    padding-top: 2rem;
+    text-align: center;
+    position: static;
+  }
+  .second-page-header h1 {
+    -webkit-transform: unset;
+            transform: unset;
+    -webkit-transform-origin: unset;
+            transform-origin: unset;
+  }
+  .second-page-hero-photo {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 40rem;
+            flex: 1 1 40rem;
+  }
+  .second-page-hero-text {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 40rem;
+            flex: 1 1 40rem;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    padding-bottom: 5rem;
+  }
+  .second-page-hero-text h1 {
+    text-align: center;
+  }
+  .cake-cards-button {
+    margin: 0 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
 }
 
 /*  Third page */
@@ -737,6 +839,43 @@ li {
   color: black !important;
   font-size: 1rem;
   text-transform: capitalize;
+}
+
+/* Third page media query */
+@media screen and (max-width: 948px) {
+  .third-page-header {
+    padding-top: 2rem;
+    text-align: center;
+    position: static;
+  }
+  .third-page-header h1 {
+    -webkit-transform: unset;
+            transform: unset;
+    -webkit-transform-origin: unset;
+            transform-origin: unset;
+  }
+  .third-page-hero-photo {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 40rem;
+            flex: 1 1 40rem;
+  }
+  .third-page-hero-text {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 40rem;
+            flex: 1 1 40rem;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    padding-bottom: 5rem;
+  }
+  .third-page-hero-text h1 {
+    text-align: center;
+  }
+  .gift-cards-button {
+    margin: 0 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
 }
 
 /*  fourth page */
@@ -886,6 +1025,43 @@ li {
   text-transform: capitalize;
 }
 
+/*Fourth page media query*/
+@media screen and (max-width: 948px) {
+  .fourth-page-header {
+    padding-top: 2rem;
+    text-align: center;
+    position: static;
+  }
+  .fourth-page-header h1 {
+    -webkit-transform: unset;
+            transform: unset;
+    -webkit-transform-origin: unset;
+            transform-origin: unset;
+  }
+  .fourth-page-hero-photo {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 40rem;
+            flex: 1 1 40rem;
+  }
+  .fourth-page-hero-text {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 40rem;
+            flex: 1 1 40rem;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    padding-bottom: 5rem;
+  }
+  .fourth-page-hero-text h1 {
+    text-align: center;
+  }
+  .flowers-cards-button {
+    margin: 0 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
 /*  fifth page */
 .fifth-page {
   min-height: 150vh;
@@ -1032,5 +1208,42 @@ li {
   color: #151515 !important;
   font-size: 1rem;
   text-transform: capitalize;
+}
+
+/*  Fifth page media query  */
+@media screen and (max-width: 948px) {
+  .fifth-page-header {
+    padding-top: 2rem;
+    text-align: center;
+    position: static;
+  }
+  .fifth-page-header h1 {
+    -webkit-transform: unset;
+            transform: unset;
+    -webkit-transform-origin: unset;
+            transform-origin: unset;
+  }
+  .fifth-page-hero-photo {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 40rem;
+            flex: 1 1 40rem;
+  }
+  .fifth-page-hero-text {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 40rem;
+            flex: 1 1 40rem;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    padding-bottom: 5rem;
+  }
+  .fifth-page-hero-text h1 {
+    text-align: center;
+  }
+  .anniversary-cards-button {
+    margin: 0 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
 }
 /*# sourceMappingURL=styles.css.map */
