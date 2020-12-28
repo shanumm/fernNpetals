@@ -285,10 +285,13 @@
 
 /* <------page 1 responsive-----> */
 
-@media screen and(max-width: 948px)  {
-  .background-image
-  {
+@media screen and(max-width: 948px) {
+  .background-image {
     background: url("https://cdn.pixabay.com/photo/2016/03/23/15/00/ice-cream-cone-1274894_960_720.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
   }
   #logo {
     flex: 1 1 10rem;
@@ -308,36 +311,33 @@
   }
   .homepage {
     order: 2;
-    padding-top: .5rem;
+    padding-top: 0.5rem;
   }
 
-  .hero{
-    display:block;
+  .hero {
+    display: block;
     position: relative;
 
-    .hero-text
-    {
+    .hero-text {
       position: absolute;
       top: 50%;
       left: 50%;
       flex-wrap: nowrap;
       transform: translateY(calc(-50% - 10vh)) translateX(-50%);
-      h1,h3{
+      h1,
+      h3 {
         width: 100%;
         padding: 0 2rem;
       }
     }
-    .hero-nav{
+    .hero-nav {
       position: absolute;
       transform: translateX(-250%);
       left: 0;
       bottom: 20%;
     }
   }
-  .service-logo{
+  .service-logo {
     display: none;
   }
-
 }
-
-
