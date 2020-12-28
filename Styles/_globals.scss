@@ -31,3 +31,16 @@ a {
   text-decoration: none;
   color: white;
 }
+
+
+/* Scroll bar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #ffcce0;
+}
+::-webkit-scrollbar-thumb {
+  background: #ff4d94;
+}

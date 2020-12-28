@@ -28,14 +28,13 @@ a {
   text-decoration: none;
 }
 .active {
-  background: grey;
-  color: white;
+  color: black;
   padding: 0.8rem 1.2rem;
   border-radius: 2rem;
 }
 
 .activescroll {
-  background: rgba(196, 196, 196, 0.4);
+  background: pink;
   backdrop-filter: blur(8px);
   z-index: 10;
   border-radius: 1px;
